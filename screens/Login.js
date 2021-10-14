@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity, Pressable } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
-const Login = (navigation) => {
+const Login = ({ navigation }) => {
 	return (
 		<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
 			<Image
@@ -21,7 +21,9 @@ const Login = (navigation) => {
 				Power Bike Shop
 			</Text>
 			<Pressable
-				onPress={() => {}}
+				onPress={() => {
+					navigation.navigate("Home");
+				}}
 				activeOpacity={0.8}
 				style={{
 					backgroundColor: "#e3e3e3",
