@@ -9,7 +9,7 @@ import {
 } from "@expo/vector-icons";
 
 const Home = () => {
-	const Cat = ["All", "RoadBike", "Mountain", ""];
+	const Category = ["All", "RoadBike", "Mountain", "Urban", "Others+"];
 	return (
 		<View style={{ backgroundColor: "white", flex: 1, paddingTop: 10 }}>
 			<View
@@ -33,7 +33,7 @@ const Home = () => {
 					alignItems: "center",
 				}}
 			>
-				<Text style={{ color: "rgba(0,0,0,10", fontWeight: "bold" }}>
+				<Text style={{ color: "#B2BEB5", fontWeight: "bold", fontSize: 18 }}>
 					The World's{" "}
 					<Text
 						style={{
@@ -59,27 +59,30 @@ const Home = () => {
 			</Text>
 
 			<ScrollView
-				horzontal
-				showsVerticalScrollIndicator={false}
-				style={{ margin: 10, fontSizse: 20 }}
+				horizontalVerticaScrollIndicators={false}
+				style={{ margin: 10, fontSize: 20 }}
 			>
-				{Cat.map((category, index) => {
-					<TouchableOpacity key={index} activeopacity={0.8}>
-						<Text
-							style={{
-								color: "black",
-								fontWeight: "600",
-								fontSize: 20,
-								backgroundColor: "#e9e8ed",
-								marginRight: 10,
-								padding: "0.55em",
-								borderRadius: 17,
-							}}
-						>
-							{category}
-						</Text>
-					</TouchableOpacity>;
-				})}
+				<Text>
+					{Category.map((category, index) => {
+						return (
+							<TouchableOpacity key={index} activeOpacity={0.8}>
+								<Text
+									style={{
+										color: "grey",
+										fontWeight: "600",
+										backgroundColor: "#e9e8ed",
+										fontSize: 20,
+										marginRight: 10,
+										padding: "0.55em",
+										borderRadius: 17,
+									}}
+								>
+									{category}
+								</Text>
+							</TouchableOpacity>
+						);
+					})}
+				</Text>
 			</ScrollView>
 		</View>
 	);
