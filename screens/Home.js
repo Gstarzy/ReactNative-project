@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import Card from "../components/Card";
+import Grid from "../components/Grid";
 import Tab from "../components/Tabs";
 import Container from "../components/Container";
 
